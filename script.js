@@ -36,4 +36,53 @@ window.onload = function () {
         window.location.href = "index.html";
     }
     carregarMensagens();
+
+}
+
+function adicionarFoto() {
+    const input = document.getElementById("inputFoto");
+    const file = input.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        let fotos = JSON.parse(localStorage.getItem("fotos")) || [];
+        fotos.push(e.target.result);
+        localStorage.setItem("fotos", JSON.stringify(fotos));
+        carregarFotos();
+    };
+
+    reader.readAsDataURL(file);
+}
+
+function carregarFotos() {
+    const galeria = document.getElementById("galeria");
+    if (!galeria) return;
+
+    galeria.innerHTML = "";
+    let fotos = JSON.parse(localStorage.getItem("fotos")) || [];
+
+    fotos.forEach((foto, index) => {
+        galeria.innerHTML += `
+            <div class="quadro-foto">
+                <img src="${foto}">
+                <button onclick="excluirFoto(${index})">X</button>
+            </div>
+        `;
+    });
+}
+
+function excluirFoto(index) {
+    let fotos = JSON.parse(localStorage.getItem("fotos")) || [];
+    fotos.splice(index, 1);
+    localStorage.setItem("fotos", JSON.stringify(fotos));
+    carregarFotos();
+}
+
+window.onload = function () {
+    if (localStorage.getItem("logado") !== "true" && !window.location.href.includes("index.html")) {
+        window.location.href = "index.html";
+    }
+    carregarMensagens();
+    carregarFotos();
 }
