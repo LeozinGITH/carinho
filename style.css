@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #1a0f2e;
+    color: white;
+}
+
+nav {
+    background: #2a1745;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a, nav button {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+nav button:hover,
+nav a:hover {
+    color: #b57edc;
+}
+
+.container {
+    padding: 40px;
+    text-align: center;
+}
+
+.texto-romantico {
+    max-width: 600px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #d8b4fe;
+}
+
+textarea {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #2a1745;
+    color: white;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: #6b21a8;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #9333ea;
+}
+
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: #2a1745;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.login-container input {
+    display: block;
+    width: 250px;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: #1a0f2e;
+    color: white;
+}
+
+.mensagem {
+    background: #2a1745;
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 10px;
+    width: 60%;
+    position: relative;
+}
+
+.mensagem button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: crimson;
+    padding: 5px 10px;
+}
+
+.presente-container {
+    margin-top: 40px;
+}
+
+.gift-box {
+    font-size: 80px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gift-box:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.desafio-box {
+    display: none;
+    margin-top: 20px;
+    background: #2a1745;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.desafio-box input {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    margin-top: 10px;
+    background: #1a0f2e;
+    color: white;
+}
+
+.mensagem-secreta {
+    display: none;
+    margin-top: 30px;
+    background: linear-gradient(135deg, #3b0764, #6b21a8);
+    padding: 25px;
+    border-radius: 15px;
+    animation: aparecer 1.5s ease forwards;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

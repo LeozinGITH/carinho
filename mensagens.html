@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Mensagens 💜</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h3>💜 Nosso Cantinho</h3>
+    <div>
+        <a href="dashboard.html">Início</a>
+        <a href="mensagens.html">Mensagens</a>
+        <button onclick="logout()">Sair</button>
+    </div>
+</nav>
+
+<div class="container">
+    <h2>Deixe uma mensagem 💌</h2>
+
+    <textarea id="novaMensagem" placeholder="Escreva algo especial..."></textarea>
+    <button onclick="adicionarMensagem()">Salvar</button>
+
+    <div id="listaMensagens"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
