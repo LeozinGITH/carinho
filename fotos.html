@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Nossas Fotos 💜</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h3>💜 Nosso Cantinho</h3>
+    <div>
+        <a href="dashboard.html">Início</a>
+        <a href="mensagens.html">Mensagens</a>
+        <a href="fotos.html">Fotos</a>
+        <button onclick="logout()">Sair</button>
+    </div>
+</nav>
+
+<div class="container">
+    <h2>Nossas Memórias 📸</h2>
+
+    <input type="file" id="inputFoto" accept="image/*">
+    <button onclick="adicionarFoto()">Adicionar Foto</button>
+
+    <div id="galeria" class="galeria"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
