@@ -150,4 +150,39 @@ button:hover {
 @keyframes aparecer {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+
+}
+
+.galeria {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.quadro-foto {
+    background: #2a1745;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(147, 51, 234, 0.3);
+    position: relative;
+    transition: 0.3s;
+}
+
+.quadro-foto:hover {
+    transform: scale(1.03);
+}
+
+.quadro-foto img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.quadro-foto button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: crimson;
+    padding: 5px 8px;
+    font-size: 12px;
 }
